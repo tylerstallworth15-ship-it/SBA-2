@@ -1,11 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessible Design Co.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accessible Design Co.</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    
+
+  <!--header-->
+  <header>
+    <img
+      src="https://freedesignfile.com/upload/2016/03/Modern-logos-abstract-design-02.jpg"
+      alt="Accessible Design Co. Logo"
+    />
+    <nav role="navigation">
+      <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--main-->
+  <main>
+
+    <!--hero-->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <h1>Design That Includes Everyone</h1>
+        <p>We build accessible, user-friendly websites for all users.</p>
+        <button>Get Started</button>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-container">
+        <h2>About Us</h2>
+        <p>Accessible Design Co. focuses on creating websites that meet accessibility standards and look great on any device.</p>
+      </div>
+    </section>
+
+    <!--services-->
+    <section id="services">
+      <div class="services-container">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+          <article>
+            <h3>Web Audits</h3>
+            <p>We review your site for accessibility and usability.</p>
+          </article>
+          <article>
+            <h3>Responsive Design</h3>
+            <p>Layouts that work on phones, tablets, and desktops.</p>
+          </article>
+          <article>
+            <h3>Consulting</h3>
+            <p>We help teams understand</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--contact-->
+    <section id="contact">
+      <div class="contact-container">
+        <h2>Contact Us</h2>
+
+        <form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input id="name" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" type="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input id="subject" type="text" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!--footer-->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Accessible Design Co.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
