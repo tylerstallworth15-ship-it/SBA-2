@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accessible Design Co.</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -14,7 +14,8 @@
       src="https://freedesignfile.com/upload/2016/03/Modern-logos-abstract-design-02.jpg"
       alt="Accessible Design Co. Logo"
     />
-    <nav role="navigation">
+    <!--nav-->
+    <nav role="navigation" aria-label="Main navigation">
       <ul class="nav">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -28,37 +29,37 @@
   <main>
 
     <!--hero-->
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-labelledby="hero-heading">
       <div class="hero-container">
-        <h1>Design That Includes Everyone</h1>
+        <h1 id="hero-heading">Design That Includes Everyone</h1>
         <p>We build accessible, user-friendly websites for all users.</p>
-        <button>Get Started</button>
+        <button type="button" aria-label="Get started">Get Started</button>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" aria-labelledby="about-heading">
       <div class="about-container">
-        <h2>About Us</h2>
+        <h2 id="about-heading">About Us</h2>
         <p>Accessible Design Co. focuses on creating websites that meet accessibility standards and look great on any device.</p>
       </div>
     </section>
 
     <!--services-->
-    <section id="services">
+    <section id="services" aria-labelledby="services-heading">
       <div class="services-container">
-        <h2>Our Services</h2>
+        <h2 id="services-heading">Our Services</h2>
         <div class="service-grid">
-          <article>
-            <h3>Web Audits</h3>
-            <p>We review your site for accessibility and usability.</p>
+          <article aria-labelledby="audit-heading">
+            <h3 id="audit-heading">Web Audits</h3>
+            <p>We review your websites for accessibility and usability.</p>
           </article>
-          <article>
-            <h3>Responsive Design</h3>
+          <article aria-labelledby="responsive-heading">
+            <h3 id="responsive-heading">Responsive Design</h3>
             <p>Layouts that work on phones, tablets, and desktops.</p>
           </article>
-          <article>
-            <h3>Consulting</h3>
+          <article aria-labelledby="consult-heading">
+            <h3 id="consult-heading">Consulting</h3>
             <p>We help teams understand</p>
           </article>
         </div>
@@ -66,33 +67,63 @@
     </section>
 
     <!--contact-->
-    <section id="contact">
+    <section id="contact" aria-labelledby="contact-heading">
       <div class="contact-container">
-        <h2>Contact Us</h2>
+        <h2 id="contact-heading">Contact Us</h2>
+        <form aria-labelledby="contact-heading" aria-describedby="contact-instructions">
+          <p id="contact-instructions">
+            Please fill out the form below.
+          </p>
 
-        <form>
           <div class="form-group">
             <label for="name">Name:</label>
-            <input id="name" type="text" required />
+            <input
+              id="name"
+              type="text"
+              required
+              aria-required="true"
+              aria-describedby="contact-instructions"
+            />
           </div>
 
           <div class="form-group">
             <label for="email">Email:</label>
-            <input id="email" type="email" required />
+            <input
+              id="email"
+              type="email"
+              required
+              aria-required="true"
+              aria-describedby="contact-instructions"
+            />
           </div>
 
           <div class="form-group">
             <label for="subject">Subject:</label>
-            <input id="subject" type="text" />
+            <input
+              id="subject"
+              type="text"
+              aria-describedby="contact-instructions"
+            />
           </div>
 
           <div class="form-group">
             <label for="message">Message:</label>
-            <textarea id="message" rows="4" required></textarea>
+            <textarea
+              id="message"
+              rows="4"
+              required
+              aria-required="true"
+              aria-describedby="contact-instructions"
+            ></textarea>
           </div>
 
           <div class="form-group">
-            <button type="submit">Send</button>
+            <button
+              type="submit"
+              aria-label="Send message"
+            >
+              Send
+            </button>
           </div>
         </form>
       </div>
@@ -101,7 +132,7 @@
   </main>
 
   <!--footer-->
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-container">
       <p>&copy; 2025 Accessible Design Co.</p>
     </div>
